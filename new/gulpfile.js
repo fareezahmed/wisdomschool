@@ -1,11 +1,15 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
+// var autoprefixer = require('gulp-autoprefixer');
 var babel = require('gulp-babel');
+var prefix = require('gulp-autoprefixer');
+var minify = require('gulp-minify-css');
+var plumber = require('gulp-plumber');
+
 
 gulp.task('babel', () => {
-    return gulp.src('src/**/*.js')
+    return gulp.src('src/app/*.js')
         .pipe(babel({
             presets: ['es2015']
         }))
@@ -13,17 +17,32 @@ gulp.task('babel', () => {
 });
 
 gulp.task('babel:watch', function () {
-  gulp.watch('./src/**/*.js', ['sass']);
+  gulp.watch('./src/app/*.js', ['babel']);
 });
 
-gulp.task('sass', function () {
-  return gulp.src('./src/**/*.sass')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./src/css'));
+// gulp.task('sass', function () {
+//   return gulp.src('./src/sass/*.scss')
+//     .pipe(sass().on('error', sass.logError))
+//     .pipe(gulp.dest('./src/css'));
+// });
+
+function onError(err) {
+    console.log(err);
+}
+
+gulp.task('sass', function(){
+    return gulp.src('./src/sass/*.scss')
+        .pipe(sass())
+        .pipe(prefix('last 2 versions'))
+        .pipe(minify())
+        .pipe(gulp.dest('./style'))
+        .pipe(plumber({
+            errorHandler: onError
+        }))
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./src/**/*.sass', ['sass']);
+  gulp.watch('./src/sass/*.scss', ['sass']);
 });
 
 gulp.task('pug', function(){
@@ -34,21 +53,21 @@ gulp.task('pug', function(){
   .pipe(gulp.dest('./'))
 });
 
-gulp.task('watch', function(){
+gulp.task('pug:watch', function(){
   gulp.watch('./src/**/*.pug',['pug'])
 });
 
-gulp.task('autoprefixer', () =>
-    gulp.src('src/css/*.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('./style'))
-);
+// gulp.task('autoprefixer', () =>
+//     gulp.src('src/css/*.css')
+//         .pipe(autoprefixer({
+//             browsers: ['last 2 versions'],
+//             cascade: false
+//         }))
+//         .pipe(gulp.dest('./style'))
+// );
+//
+// gulp.task('auto:watch', function(){
+//   gulp.watch('./src/css/*.css',['autoprefixer'])
+// });
 
-gulp.task('auto:watch', function(){
-  gulp.watch('./src/css/*.css',['autoprefixer'])
-});
-
-gulp.task('default', ['watch','sass:watch','babel:watch', 'auto:watch'])
+gulp.task('default', ['pug','sass', 'babel', 'pug:watch','sass:watch','babel:watch'])
