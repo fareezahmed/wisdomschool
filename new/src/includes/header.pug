@@ -1,0 +1,6 @@
+- var values = {'about':'Who We Are', 'work':'What We Do', 'donate':'How To Help', 'volunteer':'Get Involved'};
+nav.mainNav(role='navigation')
+  ul
+    each val, index in values
+      li
+        a(href=index)=val
