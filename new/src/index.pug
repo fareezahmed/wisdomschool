@@ -3,8 +3,58 @@ doctype html
 - var filename = "Home"
 html
   include includes/head.pug
-  body
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  body.home
     include includes/header.pug
-    h1 Fareez
-    p Welcome to my super lame site.
+    //- <!-- ==========================================================
+    //- 2.*Hero_area start
+    //- ============================================================ -->
+    <section class="romana_hero_area">
+        <div class="hero_slider2">
+            <div class="hero_slider_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="romana_hero_text">
+                                <h1>Save the life to </h1>
+                                <h2>Make the better world</h2>
+                                <p>Delenit augue duis dolore te option congue nihil imperdiet feugait nulla facilisi. tempor tum soluta nobis eleifend option congue nihil imperdiet doming.</p>
+                                <div class="romana_slider_btn">
+                                    <a href="donation.html" class="hvr-box-shadow-outset">Donate Now </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- column end -->
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="romana_count_down">
+                                <h1>UPCOMING EVENT</h1>
+                                <h2>Food for hungry children</h2>
+                                <div class="romana_count_date_venu">
+                                    <ul>
+                                        <li><i class="icofont icofont-ui-calendar"></i>December 24, 2016</li>
+                                        <li><i class="icofont icofont-social-google-map"></i>indrella Auditorium, Newyork</li>
+                                    </ul>
+                                </div>
+                                <p>Telenit augue duis dolore te option congue nihil imfacilisi.
+                                    <br>Hempor tum soluta nobis eleifend option coiet doming.</p>
+                                <div class="romana_clock">
+                                    <input class="date" type="hidden" value="2017/7/15">
+                                    <div id="clock"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- item one end -->
+        </div>
+    </section>
+    <!-- HeroSlider area end -->
     include includes/footer.pug

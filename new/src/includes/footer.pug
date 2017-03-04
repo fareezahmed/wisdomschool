@@ -1,7 +1,59 @@
 //- includes/footer.pug
-script(src="https://code.jquery.com/jquery-3.1.1.min.js", integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin="anonymous")
-script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js", integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb", crossorigin="anonymous")
-script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js", integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn", crossorigin="anonymous")
-script(scr="app/app.js", type="text/javascript")
-footer#footer
-  p Copyright (c) foobar
+- var activities = {'faq':'faq', 'support': 'support', 'contact': 'contact us'};
+- var news = {'faq':'faq', 'support': 'support', 'contact': 'contact us'};
+
+footer#footer.romana_footer_area.romana_section_padding
+  .romana_footer_top
+    .container
+      .row
+        .col-md-3.col-sm-6
+          .footer_left_text
+            .footer_logo
+              a(href="index.html")
+                img(src="img/footer-logo.jpg" alt="")
+            p Autem vel eum iriure dolor in lorem hendrerit velit esse consequat, vel illum dolore feugiat nulla facilisis at vero eros et accumsan et iusto odio dign issim qui blandit praesent lupt...
+        .col-md-3.col-sm-6
+          .footer_menu
+          h2 Recent Activities
+          ul
+            each val, index in activities
+              li
+                i.icofont.icofont-thin-right
+                a(href=index)=val
+        .col-md-3.col-sm-6
+          h2 Local News
+          ul
+            each val, index in news
+              .romana_single_footer_news
+                .romana_single_footer_news_img
+                  img(src="images/footer_img1.jpg", alt="")
+                .romana_single_footer_news_text
+                  a(href=index)
+                    h3 val
+                  p November 14, 2016
+        .col-md-2.col-md-offset-1.col-sm-6
+          .footer_contact
+            h2
+              h2 Contact Us
+                .romana_single_contact
+                  p Email Us
+                    span crazycafe.net@gmail.com
+                .romana_single_contact
+                  address
+                    p Mail Us
+                      span PO.BOX 4007
+  .romana_footer_bottom
+    .container
+      .row
+        .col-xs-12
+          .romana_footer_bottom_text.text-center
+            p Copyright (c) Wisdom Public School
+  script(src="js/jquery-3.1.1.min.js", integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin="anonymous")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js", integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb", crossorigin="anonymous")
+  script(src="js/bootstrap.min.js", integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn", crossorigin="anonymous")
+  script(scr="app/owl.carousel.min.js", type="text/javascript")
+  script(scr="app/jQuery-plugin-progressbar.js", type="text/javascript")
+  script(scr="app/jquery.barfiller.js", type="text/javascript")
+  script(scr="app/nivo-lightbox.min.js", type="text/javascript")
+  script(scr="app/active.js", type="text/javascript")
+  script(scr="app/app.js", type="text/javascript")

@@ -1,0 +1,78 @@
+.commonh2{
+    font-size: 40px;
+    font-weight: $regular;
+    text-transform: capitalize;
+    color: $black_color;
+}
+.commonh3{
+    font-size: 30px;
+    font-weight: $medium;
+    text-transform: inherit;
+    color: $black_color;
+}
+.common_btn{
+    background: $orange;
+    display: inline-block;
+    width: 172px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: capitalize;
+    font-weight: $light;
+    color:$white_color;
+    font-size: 16px;
+    border-radius: 3px;
+    @include transition-duration(.4s);
+}
+.common_bg{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.common_after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.common_shadow{
+    border: 10px solid #ffffff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12);
+}
+.common_shadow_btn{
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.15);
+}
+.common_input_after{
+        background:$blue_color;
+        color: $white_color;
+        content: "\f0d7 ";
+        cursor: pointer;
+        font-family: FontAwesome;
+        font-size: 17px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 45px;
+        width: 50px;
+        text-align: center;
+        line-height: 45px;
+        pointer-events: none;
+}
+
+.common_slider_nav{
+    width: 46px;
+    height: 46px;
+    line-height: 38px;
+    position: absolute;
+    border: 5px solid #d3e9fd;
+    top:50%;
+    margin-top: -25px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    color:$white_color;
+    @include transition-duration(.4s);;
+}

@@ -1,6 +1,44 @@
 - var values = {'about':'Who We Are', 'work':'What We Do', 'donate':'How To Help', 'volunteer':'Get Involved'};
-nav.mainNav(role='navigation')
-  ul
-    each val, index in values
-      li
-        a(href=index)=val
+- var support = {'faq':'faq', 'support': 'support', 'contact': 'contact us'};
+- var phone = '1300 080 000';
+//- #preloader
+//-   .preloader_spinner
+header
+  .romana_header_top
+    .container
+      .row
+        .col-md-9.col-sm-8
+          .romana_header_top_left
+            ul
+              each val, index in support
+                li
+                  a(href=index)=val
+        .col-md-3.col-sm-4
+          .romana_header_top_right.text-right
+            a(href="tel:#{phone}") Donation Hotline : #{phone}
+  .romana_header_bottom
+    .container
+      .row
+        .col-sm-2.col-xs-6
+          .romana_logo
+            a(href="index.html")
+              img(src="img/logo.png" alt="")
+        .col-sm-10
+          .navbar-header
+            button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+              span.sr-only
+              i.icofont.icofont-navigation-menu
+          nav#navbar.navbar-collapse.collapse(role='navigation')
+            ul.nav.navbar-nav
+              each val, index in values
+                li
+                  a(href=index)=val
+          ul.cartSearch
+            li.search
+              a(href="#")
+                i.icofont.icofont-search
+              a.hvr-box-shadow-outset(href="donation.html") Donate Now
+          form.searchForm
+            i.icofont.icofont-close
+              input(type="search", placeholder="Search now")
+              input(type="submit", value="&#xeded;")

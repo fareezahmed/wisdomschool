@@ -1,0 +1,63 @@
+@mixin transition-duration($value){
+    -webkit-transition-duration: $value; 
+    -moz-transition-duration: $value; 
+    -o-transition-duration: $value; 
+    transition-duration: $value;
+}
+//responsive
+@mixin mobile(){
+    @media only screen and (min-width: 0px) and (max-width : 767px){
+        @content;
+    }
+}
+@mixin mobile2(){
+    @media only screen and (min-width: 480px) and (max-width : 767px){
+        @content;
+    }
+}
+@mixin tab(){
+    @media only screen and (min-width:768px) and (max-width:991px){
+        @content;
+    }
+}
+@mixin medium(){
+    @media only screen and (min-width: 992px) and (max-width : 1199px){
+        @content;
+    }
+}
+@mixin large(){
+    @media only screen and (min-width: 1200px) and (max-width : 1300px){
+        @content;
+    }
+}
+@mixin max991(){
+    @media only screen and (min-width : 0px)  and (max-width : 991px){
+        @content;
+    }
+}
+@mixin min992(){
+    @media only screen and (min-width : 992px){
+        @content;
+    }
+}
+@mixin min768(){
+    @media only screen and (min-width : 768px){
+        @content;
+    }
+}
+//@mixin min1360(){
+//    @media only screen and (min-width: 1360px){
+//        @content;
+//    }
+//}
+
+//@mixin min1600(){
+//    @media only screen and (min-width : 1600px){
+//        @content;
+//    }
+//}
+//@mixin min1900(){
+//    @media only screen and (min-width : 1900px){
+//        @content;
+//    }
+//}
