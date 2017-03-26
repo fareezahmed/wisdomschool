@@ -1,0 +1,18 @@
+include ../data/home-hero-carousel.pug
+//- ==========================================================
+//- Hero_area start
+//- ============================================================
+section.hero-carousel.romana_hero_area
+  .hero_slider
+    each val, index in carousel
+      .hero_slider_bg(data-id=index)
+        .container
+          .row
+            .col-xs-12
+              .romana_hero_text
+                  h1 !{val.title}
+                  p !{val.desc}
+                    .romana_slider_btn
+                      a(href="donation.html" class="hvr-box-shadow-outset") Donate Now
+                    .slider_prg
+                      .slider_prg_in

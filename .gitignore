@@ -1,3 +1,5 @@
 new/node_modules/*
 .DS_Store
 Thumb.db
+temp/*
+whatsImages/*

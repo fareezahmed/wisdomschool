@@ -1,0 +1,19 @@
+.cause-card {
+  .romana_single_cause_text {
+    > p {
+      min-height: 190px;
+    }
+    .barfiller {
+      .tip {
+        position: relative;
+        top: -8px;
+        z-index: 1;
+      }
+      .fill {
+        height: 12px;
+        position: relative;
+        top: -29px;
+      }
+    }
+  }
+}

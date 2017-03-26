@@ -1,0 +1,22 @@
+include ../data/about-section.pug
+
+.about-section.romana_about_area.romana_section_padding
+  .container
+    .row
+      .col-xs-12
+        include section-title.pug
+    .row
+      .col-sm-6.col-xs-12
+        .romana_about_video
+          a(data-lightbox-gallery="myGallery", href="https://youtu.be/_1tHGeD9vlE")
+            img(src=image, class="img-responsive", alt="")
+            span
+              img(src="img/vendor/play_icon.png" alt="")
+      .col-sm-6.col-xs-12
+        .romana_about_text
+          h3 !{subTitle}
+          p
+            span !{tagline}
+          p !{sectionDesc}
+          .romana_about_btn
+            a.hvr-box-shadow-outset(href="about.html") read more

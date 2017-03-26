@@ -1,0 +1,29 @@
+- var title = 'Our Stories'
+- var desc = 'Local stories of potential beneficiaries and how there lives could be changed'
+-
+  var card = [{
+    'image': 'img/str1.jpg',
+    'href': '',
+    'title': 'Aatika grow talent',
+    'desc': 'Young Aatika huma, is upcoming kid that love to learn and dream someday she would become a educator to inspire many more childern. Her family had to move to far away city for providing better education but love go back be with her grandparents. Help us provide this facility to this family.',
+  },{
+    'image': 'img/str2.jpg',
+    'href': '',
+    'title': 'Uplift a village',
+    'desc': 'Jhumri Teliya is small town in District Koderma of Jharkhand, India. This town does have decent school for young mind of the village and this similar suitation many other villages around. Build a quality education instituation would upflight this village and many other around it.',
+  },{
+    'image': 'img/vendor/blog_img1.jpg',
+    'href': '',
+    'title': 'Will for Change',
+    'desc': 'Its been great jounery of small group of educator dreaming to change there home town by provide free education. Now they need you help make significant change. To bring change they need a education center were they can provide there service to under privilage community.'
+  }]
+
+.romana_recentNews_area.romana_section_padding
+  .container
+    .row
+      .col-xs-12
+        include section-title.pug
+    .row
+      each item, index in card
+        .col-sm-4
+          include card.pug

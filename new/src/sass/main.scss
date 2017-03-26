@@ -1,3 +1,24 @@
+@import 'header';
+@import 'hero-carousel';
+@import 'cause-banner';
+@import 'cause-card';
+@import 'image-banner';
+@import 'about-section';
+@import 'quote';
+
 body {
-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.btn-donate {
+  border-radius: 3px;
+  padding: 1em 1.5em;
+  background-color: #a498e2;
+  color: white;
+  font-weight: 400;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
 }

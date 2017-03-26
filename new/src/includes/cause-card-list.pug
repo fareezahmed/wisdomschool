@@ -1,0 +1,33 @@
+include ../data/home-cause-card-list.pug
+
+.romana_recent_cause_area.romana_section_padding
+  .container
+    .row
+      .col-xs-12
+        include section-title.pug
+    .row
+      each val, index in card
+        .col-sm-4
+          .cause-card.romana_single_cause_text_img
+            .romana_cause_img
+              img(src=val.image, alt="")
+            .romana_day_left
+              p 14 !{val.Days} left
+            .romana_single_cause_text
+              h3
+                a(href=val.link) !{val.title}
+              p !{val.desc}
+              #bar3.barfiller(data-color="#f5ab35")
+                .tipWrap
+                  span.tip
+                span.fill1.fill(data-percentage=val.percent)
+              .romana_raise_goal.clearfix
+                .romana_raise_left
+                  p Raised
+                    span $!{val.rasied}
+                .romana_raise_right
+                  p goal
+                    span $!{val.goal}
+              .romana_cause_btn
+              - var donateLink = 'donation.html?' + val.id
+                a(href=donateLink, class="btn-donate hvr-box-shadow-outset") Donate Now

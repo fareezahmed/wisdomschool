@@ -1,0 +1,28 @@
+include ../data/home-cause-banner.pug
+//- ==========================================================
+//- Hero_area start
+//- ============================================================
+.cause-banner.romana_charity_area
+  .romana_charity_date
+    p !{cause.days} Days left
+  .container
+    .row
+      .col-md-3.col-md-offset-2.col-sm-6.col-sm-offset-6.col-xs-12
+        .romana_progress_circle
+          .romana_progress_circle_top
+            .progress-bar.position(data-percent=cause.percent, data-duration="1000", data-color="#fff,black")
+          .romana_progress_circle_bottom
+              .romana_progress_circle_bottom_single
+                p Raised
+                  span $!{cause.raised}
+                        </div>
+              .romana_progress_circle_bottom_single
+                p goal
+                  span  $!{cause.goal}
+        .col-md-6.col-xs-12
+          .romana_charity_text
+            h2 !{cause.typeCause}
+            h3 !{cause.title}
+            p !{cause.desc}
+            .romana_charity_btn
+            a(href="donation.html", class="btn-donate btn-white hvr-box-shadow-outset") Donate Now

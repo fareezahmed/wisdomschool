@@ -1,0 +1,33 @@
+.hero-carousel {
+  .hero_slider_bg[data-id="0"]{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.35)
+      ), url(../../img/hero-bg0.jpg);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero_slider_bg[data-id="1"]{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.35)
+      ), url(../../img/hero-bg1.jpg);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero_slider_bg[data-id="2"]{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.35)
+      ), url(../../img/hero-bg2.jpg);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+
+  }
+  .hero_slider_bg[data-id="3"]{
+
+  }
+}
