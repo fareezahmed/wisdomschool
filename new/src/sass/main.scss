@@ -22,3 +22,28 @@ body {
   background-color: white;
   color: black;
 }
+
+.romana_allPage_area .romana_allPage_text h1 {
+  text-align: center;
+  font-size: 75px;
+  padding-top: 72px;
+  padding-bottom: 20px;
+}
+
+.romana_about_text h3 {
+  margin-top: 72px;
+}
+
+.about {
+  .romana_allPage_area {
+    background: url(../../img/about.jpg);
+    background-size: cover;
+  }
+}
+
+.work {
+  .romana_allPage_area {
+    background: url(../../img/work.jpg);
+    background-size: cover;
+  }
+}

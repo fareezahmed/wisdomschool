@@ -16,24 +16,31 @@ html
       .container
         .row
           .col-sm-6.col-xs-12
-            include includes/image.pug
+            .romana_mission_img
+              img(src="img/mission.jpeg", alt="")
           .col-sm-6.col-xs-12
             - var title = "Our Mission";
             -
-              var desc = ["sd","d","sd"];
+              var desc = ["Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","Lorem Ipsum is simply dummy text of the printing and typesetting industry","Lorem Ipsum is simply dummy text of the printing and typesetting industry"];
             include includes/text.pug
+            each val in desc
+              p= val
         .romana_history_vision
           .row
             .col-sm-6
               - var title = "Our history";
               -
-                var desc = ["sd","d","sd"];
+                var desc = ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","Lorem Ipsum is simply dummy text of the printing and typesetting industry","Lorem Ipsum is simply dummy text of the printing and typesetting industry"];
               include includes/text.pug
+              each val in desc
+                p= val
             .col-sm-6
               - var title = "Our Vision";
               -
-                var desc = ["sd","d","sd"];
+                var desc = ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","Lorem Ipsum is simply dummy text of the printing and typesetting industry","Lorem Ipsum is simply dummy text of the printing and typesetting industry"];
               include includes/text.pug
+              each val in desc
+                p= val
     include includes/quote.pug
     - var title = "Our Volunteer";
     - var desc = "liber tempor cum soluta nobis eleifend option <br> con gue nihil imperdiet doming id";
