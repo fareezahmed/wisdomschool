@@ -1,0 +1,26 @@
+include ../data/volunteer.pug 
+
+.romana_Volunteers_bottom
+  .row 
+    each val in volunteer
+      .col-sm-3
+        .romana_single_volunteers
+          .romana_volunteers_img
+            img(src=val.image, alt="")
+            .romana_volunteers_hover
+              ul
+                li
+                    a(href=val.facebook)
+                      i.icofont.icofont-social-facebook
+                li
+                    a(href=val.googlePlus)
+                      i.icofont.icofont-social-google-plus
+                li
+                    a(href=val.twitter)
+                      i.icofont.icofont-social-twitter
+                li
+                    a(href=val.linkedin)
+                      i.icofont.icofont-brand-linkedin
+          .romana_volunteers_text
+            h3 !{val.name}
+            p !{val.role}

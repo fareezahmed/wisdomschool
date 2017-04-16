@@ -1,1 +1,1 @@
-header ul li .btn-donate{margin:22px -5px 23px 30px;padding:1em 1.5em;color:#fff}
+header .logo :focus,header .logo :hover{color:#D3AC2B}header .logo :focus .tagline,header .logo :hover .tagline{color:#337ab7}header .title{font-size:18px;font-weight:500;margin-top:18px;padding:0;text-transform:capitalize;transition:.5s}header .title .tagline{margin-top:-5px;display:block;font-size:11px;width:100%;color:#D3AC2B;transition:.5s}header ul li .btn-donate{margin:22px -5px 23px 30px;padding:1em 1.5em;color:#fff}

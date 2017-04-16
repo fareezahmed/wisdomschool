@@ -1,0 +1,51 @@
+//- pug.pug
+doctype html
+- var filename = "About"
+html
+  include includes/head.pug
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  body.about
+    include includes/header.pug
+    include includes/page-title.pug
+    .romana_our_mission_area.romana_section_padding
+      .container
+        .row
+          .col-sm-6.col-xs-12
+            include includes/image.pug
+          .col-sm-6.col-xs-12
+            - var title = "Our Mission";
+            -
+              var desc = ["sd","d","sd"];
+            include includes/text.pug
+        .romana_history_vision
+          .row
+            .col-sm-6
+              - var title = "Our history";
+              -
+                var desc = ["sd","d","sd"];
+              include includes/text.pug
+            .col-sm-6
+              - var title = "Our Vision";
+              -
+                var desc = ["sd","d","sd"];
+              include includes/text.pug
+    include includes/quote.pug
+    - var title = "Our Volunteer";
+    - var desc = "liber tempor cum soluta nobis eleifend option <br> con gue nihil imperdiet doming id";
+    include includes/video.pug
+    include includes/home-image-banner.pug
+    .romana_Volunteers_area.romana_section_padding
+      .container
+        .row
+          .col-xs-12
+            - var title = "Our Volunteer";
+            - var desc = "liber tempor cum soluta nobis eleifend option <br> con gue nihil imperdiet doming id";
+            include includes/section-title.pug
+          include includes/volunteer.pug
+    include includes/footer.pug
+    include includes/script.pug
